@@ -1,0 +1,38 @@
+{
+  "exp14_leave_one_section_out": {
+    "H": {
+      "in_sample": 0.0,
+      "leave_one_out": 0.17
+    },
+    "P": {
+      "in_sample": 0.253,
+      "leave_one_out": 0.273
+    },
+    "C": {
+      "in_sample": 0.261,
+      "leave_one_out": 0.259
+    },
+    "B": {
+      "in_sample": 1.0,
+      "leave_one_out": 0.953
+    },
+    "S": {
+      "in_sample": 0.479,
+      "leave_one_out": 0.456
+    }
+  },
+  "exp15_shuffle": {
+    "real": [
+      88.1,
+      48.7
+    ],
+    "word_order_shuffle": [
+      88.1,
+      48.7
+    ],
+    "glyph_shuffle": [
+      74.0,
+      45.2
+    ]
+  }
+}

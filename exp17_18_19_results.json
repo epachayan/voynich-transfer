@@ -1,0 +1,47 @@
+{
+  "exp17_beam": {
+    "greedy": [
+      76.6,
+      77.2
+    ],
+    "beam5": [
+      80.7,
+      81.0
+    ],
+    "note": "beam recovery ~81% vs greedy ~77%, stable, far from 100% -> A/B gap not a greedy artifact"
+  },
+  "exp18_cross_transcriber": {
+    "H": [
+      76.6,
+      77.2
+    ],
+    "F": [
+      70.1,
+      82.1
+    ],
+    "C": [
+      68.2,
+      68.6
+    ],
+    "note": "A/B gap holds on 2 independent transcribers (68-82%) -> not a transcription artifact"
+  },
+  "exp19_label_ngram": {
+    "star_vs_plant_TV": {
+      "suffix2": 0.278,
+      "suffix3": 0.284,
+      "prefix2": 0.254,
+      "prefix3": 0.326
+    },
+    "note": "richer templates separate star/plant (TV 0.25-0.33 vs initial-glyph 0.154) and within-dialect (p=0.0005), but pattern is the e-vs-o register axis, not evident naming",
+    "within_B_suffix2": {
+      "obs": 0.383,
+      "null": 0.173,
+      "p": 0.0005
+    },
+    "within_B_suffix3": {
+      "obs": 0.538,
+      "null": 0.316,
+      "p": 0.0005
+    }
+  }
+}

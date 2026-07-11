@@ -1,0 +1,118 @@
+{
+  "theta_sweep": [
+    {
+      "theta": 0.0,
+      "coord": 0.0187,
+      "h2": 2.0988
+    },
+    {
+      "theta": 0.1,
+      "coord": 0.0747,
+      "h2": 2.1248
+    },
+    {
+      "theta": 0.2,
+      "coord": 0.1426,
+      "h2": 2.1348
+    },
+    {
+      "theta": 0.3,
+      "coord": 0.2221,
+      "h2": 2.1327
+    },
+    {
+      "theta": 0.4,
+      "coord": 0.2868,
+      "h2": 2.1073
+    },
+    {
+      "theta": 0.5,
+      "coord": 0.3599,
+      "h2": 2.0889
+    },
+    {
+      "theta": 0.6,
+      "coord": 0.4412,
+      "h2": 2.0563
+    },
+    {
+      "theta": 0.7,
+      "coord": 0.523,
+      "h2": 2.0259
+    },
+    {
+      "theta": 0.8,
+      "coord": 0.6086,
+      "h2": 1.9619
+    },
+    {
+      "theta": 0.9,
+      "coord": 0.7019,
+      "h2": 1.9051
+    },
+    {
+      "theta": 1.0,
+      "coord": 0.7946,
+      "h2": 1.8131
+    }
+  ],
+  "real_sections": [
+    {
+      "name": "Herbal-A",
+      "coord": 0.0,
+      "h2": 2.1006,
+      "n": 7843
+    },
+    {
+      "name": "Pharma-A",
+      "coord": 0.3325,
+      "h2": 2.0633,
+      "n": 2302
+    },
+    {
+      "name": "Cosmo-B",
+      "coord": 0.4052,
+      "h2": 1.9925,
+      "n": 1225
+    },
+    {
+      "name": "Herbal-B",
+      "coord": 0.4105,
+      "h2": 2.0979,
+      "n": 3426
+    },
+    {
+      "name": "Stars-B",
+      "coord": 0.581,
+      "h2": 2.0009,
+      "n": 10455
+    },
+    {
+      "name": "Bio-B",
+      "coord": 1.0,
+      "h2": 1.8006,
+      "n": 6198
+    }
+  ],
+  "manifold_residuals_h2": {
+    "Herbal-A": 0.0018,
+    "Pharma-A": -0.0325,
+    "Cosmo-B": -0.0782,
+    "Herbal-B": 0.0292,
+    "Stars-B": 0.0182,
+    "Bio-B": -0.0125
+  },
+  "mean_intermediate_residual": -0.0158,
+  "h2_theta_peak": 2.1348,
+  "gen_coord_range": [
+    0.0187,
+    0.7946
+  ],
+  "pole_memory_test": {
+    "real_bioB_typetoken": 0.719,
+    "generated_typetoken": 0.6123,
+    "real_bioB_coord": 1.0,
+    "generated_coord": 0.795
+  },
+  "verdict": "one first-order parameter reproduces the (coordinate, h2) interior to +/-0.08 bits; the Biological pole's extremity is a word-repetition/memory effect a bigram model cannot reach"
+}

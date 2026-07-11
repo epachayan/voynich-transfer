@@ -1,0 +1,25 @@
+# --- Third-party corpora: cloned separately, never committed ---
+# These are other people's transliterations; redistributing them here would
+# defeat the point of not bundling them and raise licensing questions.
+Voynich-public/
+voynich-transcription/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# NOTE: the committed *_results.json files are REFERENCE outputs for
+# byte-level comparison and are intentionally tracked. Re-running a script
+# overwrites its JSON locally; restore the reference copy with
+#   git checkout -- <name>_results.json
+# or inspect the diff to confirm your run reproduces the reported numbers.

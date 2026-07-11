@@ -1,0 +1,476 @@
+{
+  "note": "Consolidated key results for all 20 experiments. Companion to voynich_gradient_note_v11.md. Regenerate raw numbers via the scripts; this file is for one-step diffing of a replication.",
+  "method": {
+    "metric": "h2 = H(adjacent bigram) - H(unigram), bits; space is a symbol",
+    "search": "greedy: top-90 within-word adjacent pairs per step, apply argmax-h2 merge",
+    "transfer_recovery": "(Y h2 gain under X ops) / (Y h2 gain under own ops); structural depth k=17",
+    "corpus": "github.com/chirila/Voynich-public; v101 from github.com/musyoku/voynich-transcription",
+    "calibration_full_ms_h2": {
+      "ours": 2.112,
+      "yale_csv": 2.115
+    }
+  },
+  "exp1_language_vs_control": {
+    "italian_h2_crossed_at_merge": 24,
+    "latin_h2_crossed_at_merge": 31,
+    "hebrew_h2_reached": false,
+    "ms_h2_at_merge40": 3.403,
+    "markov_control_h2_at_merge40": 3.594,
+    "verdict": "entropy repair reaches language levels but control passes more easily; no evidence of meaning; homophony forced (K 45-52 vs alphabet ~25); words ~2.6 units vs 5-6 letters"
+  },
+  "exp2_currierAB": {
+    "first_merge_A": "ch",
+    "first_merge_B": "he",
+    "recovery_A_from_B_k17": 0.766,
+    "recovery_B_from_A_k17": 0.772,
+    "recovery_pct_A_from_B": 77,
+    "recovery_pct_B_from_A": 77,
+    "recovery_range_across_depth_and_direction_pct": [
+      77,
+      80
+    ],
+    "residue_constant_across_depth": true,
+    "stability_first17_over_3_seeds": "16/17",
+    "_note": "recovery_* are fractions; recovery_pct_* are the same rounded to percent; the 77-80% headline is the range across k=17/k=40 and both directions"
+  },
+  "exp3_scribes": {
+    "within_scribe_ceiling_pct": 98.7,
+    "within_B_across_scribe_pct": 94.2,
+    "across_dialect_pct": 75.5,
+    "hand4_A_signature_per1000": 31.2,
+    "hand4_B_signature_per1000": 0.0,
+    "hand4_class": "A (contra Davis 2020 printed)",
+    "hand5_class": "B"
+  },
+  "exp4_topic_dialect_factorial": {
+    "same_dialect_same_topic_ceiling_pct": 98.5,
+    "same_dialect_diff_topic_pct": 87.8,
+    "diff_dialect_same_topic_herbal_pct": 79.7,
+    "diff_dialect_diff_topic_pct": 66.9,
+    "HB_under_HA_ci95": [
+      78.9,
+      82.4
+    ],
+    "HB_under_BB_ci95": [
+      77.5,
+      84.4
+    ],
+    "bio_B_baseline_h2": 1.788,
+    "verdict": "dialect survives topic control (79.7%); B is a family not a machine; chain HA-HB-SB-BB emerges"
+  },
+  "exp5_minimal_parse": {
+    "recovery_A_from_B_pct": 76.7,
+    "recovery_B_from_A_pct": 80.6
+  },
+  "exp6_transfer_map": {
+    "units": 13,
+    "unit_words": 2000,
+    "mds_axis1_pct": 84.1,
+    "mds_axis2_pct": 8.2,
+    "mds_axis3_pct": 4.2,
+    "seriation": [
+      "HA3",
+      "HA1",
+      "HA2",
+      "PA",
+      "SB5",
+      "SB2",
+      "HB",
+      "SB1",
+      "SB4",
+      "SB3",
+      "BB2",
+      "BB3",
+      "BB1"
+    ],
+    "mean_adjacent_similarity_pct": 92.5,
+    "endpoint_similarity_pct": 43.0,
+    "anomaly_pharma_central": true,
+    "anomaly_herbalB_in_starsB_cloud": true
+  },
+  "exp7_folio_resolution": {
+    "validation_r_vs_fiedler": 0.938,
+    "section_mean_coord": {
+      "Herbal-A": 0.0,
+      "Pharma-A": 0.33,
+      "Cosmo-B": 0.39,
+      "Herbal-B": 0.42,
+      "Stars-B": 0.58,
+      "Bio-B": 1.01
+    },
+    "adjacent_folio_delta": 0.135,
+    "overall_folio_sd": 0.352,
+    "unclassified_pages": {
+      "f1r": -0.09,
+      "f58r": 0.33,
+      "f58v": 0.54,
+      "f85r1": 0.37,
+      "f70r2": 0.3
+    }
+  },
+  "exp8_scribe_vs_regime": {
+    "scribe1_HerbalA": 0.0,
+    "scribe1_PharmaA": 0.33,
+    "scribe1_span": 0.32,
+    "scribe2_CosmoB": 0.39,
+    "scribe2_HerbalB": 0.43,
+    "scribe2_BioB": 1.01,
+    "scribe2_span": 0.62,
+    "herbalB_across_scribes_span": 0.11,
+    "unique_R2_section_dialect": 0.235,
+    "unique_R2_scribe": 0.01,
+    "shared_R2": 0.614,
+    "verdict": "regime not penmanship, ~23:1 in unique variance; gradient orthogonal to Currier A/B axis"
+  },
+  "exp9_timm_model": {
+    "T1_repetitiveness_vs_coord_global_rho": 0.053,
+    "T1_within_B_rho": 0.475,
+    "T1_within_A_rho": -0.212,
+    "T2_binding_order_rho_range": [
+      -0.321,
+      0.215
+    ],
+    "T2_distance_decay_range": [
+      0.82,
+      1.47
+    ],
+    "T3_recovery_BB_from_HA_pct": [
+      44,
+      48
+    ],
+    "T3_recovery_HA_from_BB_pct": [
+      60,
+      62
+    ],
+    "verdict": "monotony growth is a Currier-B continuum; drift between sections not along binding; drift-with-forgetting (pure-additive rejected)"
+  },
+  "exp10_robustness": {
+    "v101_recovery_A_from_B_pct": 77.2,
+    "v101_recovery_B_from_A_pct": 77.7,
+    "v101_B_rebuilds_qgallows": [
+      "4o",
+      "4oh"
+    ],
+    "three_parses_agree": {
+      "EVA_maximal": [
+        77,
+        80
+      ],
+      "EVA_minimal": [
+        76.7,
+        80.6
+      ],
+      "v101": [
+        77.2,
+        77.7
+      ]
+    },
+    "stochastic_A_from_B_mean_pct": 78.4,
+    "stochastic_B_from_A_mean_pct": 78.9,
+    "stochastic_sd": 5,
+    "worst_restart_pct": 71.3,
+    "core_inventory_stable_of17": 13
+  },
+  "exp11_generative_model": {
+    "model": "P_theta = (1-t)P_A + t P_B, char bigram incl space",
+    "h2_theta_peak": 2.135,
+    "h2_theta_peak_at": 0.2,
+    "endpoint_line_at_peak": 2.042,
+    "manifold_residuals_h2": {
+      "Herbal-A": 0.002,
+      "Pharma-A": -0.033,
+      "Cosmo-B": -0.078,
+      "Herbal-B": 0.029,
+      "Stars-B": 0.018,
+      "Bio-B": -0.012
+    },
+    "mean_intermediate_residual": -0.016,
+    "gen_coord_range": [
+      0.02,
+      0.79
+    ],
+    "real_bioB_coord": 1.0,
+    "bioB_typetoken_real": 0.719,
+    "bioB_typetoken_generated": 0.612,
+    "verdict": "one knob reproduces the gradient interior to +/-0.08 bits; pole extremity is a word-repetition/memory effect beyond bigrams"
+  },
+  "prediction_ledger_summary": {
+    "confirmed": [
+      "exp3 all",
+      "exp4 dialect-survives-topic",
+      "exp5",
+      "exp6 one-axis",
+      "exp7 validation",
+      "exp8 regime-not-penmanship",
+      "exp9 T2 T3",
+      "exp10 v101 + restarts",
+      "exp11 P1 + pole-memory",
+      "exp12 H1-falsified-as-distinct-register; exp12 marquee-null",
+      "exp13 null-passes; exp14 not-baked-in; exp15 word-order-irrelevant",
+      "exp16 self-copying-reproduces-low-entropy-gradient; exp17 not-greedy-artifact; exp18 not-transcription-artifact"
+    ],
+    "falsified_informatively": [
+      "exp2 divergence-at-move-1-not-tail",
+      "exp4 B-is-one-machine",
+      "exp9 T1-global (but within-B holds)",
+      "exp11 P2 sections-lie-ON-curve",
+      "exp11 P3 range-only-0.79",
+      "exp13 gradient-is-diagnostic (it is not \u2014 reproducible by meaningful+meaningless)",
+      "exp19 labels-featureless (partly revised: n-gram templates DO separate, but register-like)",
+      "exp20 calibrated-self-copying-reaches-pole (fails: reaches neighborhood but not the coherent pole vocabulary; pole needs template grammar)"
+    ]
+  },
+  "open_items": [
+    "template-aware (slot-grammar) self-copying generator (Exp 20 showed the pole needs word-template structure that local-mutation self-copying cannot produce)",
+    "isolate referent from register in labels (within-dialect within-register contrast; needs more label data)",
+    "OFF-PLATFORM (only remaining routes toward meaning): multispectral imaging, botanical/art-historical iconography, codicological gathering-order reconstruction"
+  ],
+  "exp12_labels": {
+    "n_labels_total": 4793,
+    "H1_label_vs_para_coord": {
+      "Herbal": [
+        -0.09,
+        0.0
+      ],
+      "Pharma": [
+        0.01,
+        0.25
+      ],
+      "Bio": [
+        0.75,
+        1.0
+      ],
+      "Cosmo": [
+        -0.03,
+        0.26
+      ],
+      "Stars": [
+        0.64,
+        0.48
+      ]
+    },
+    "H1_initial_glyph_TV_range": [
+      0.14,
+      0.33
+    ],
+    "H1_verdict": "falsified: labels are a distinct register, pulled toward the A/o-attachment pole",
+    "H2_within_B_label_TV": 0.257,
+    "H2_within_B_para_TV": 0.186,
+    "H2_within_B_p": 0.0005,
+    "H2_within_A_label_TV": 0.355,
+    "H2_within_A_para_TV": 0.12,
+    "H2_within_A_p": 0.0005,
+    "H2_verdict": "significant between-section label structure (> paragraphs) but along the register axis, not evidently referent-semantic",
+    "marquee_star_vs_plant_coord": [
+      0.01,
+      -0.0
+    ],
+    "marquee_initial_glyph_TV": 0.154,
+    "marquee_both_o_initial_frac": 0.43,
+    "marquee_verdict": "null: star-labels and plant-labels near-identical; labels do not behave like referent-names",
+    "interpretation": "the best crib candidate does not behave like naming; points mildly away from readability; not a proof of meaninglessness"
+  },
+  "exp13_synthetic_controls": {
+    "pipeline": "12 units x 2000 words, pairwise k=17 recovery, MDS axis-1 %, min pairwise similarity",
+    "real": {
+      "axis1_pct": 88.1,
+      "min_sim_pct": 48.7,
+      "h2": [
+        1.74,
+        2.13
+      ]
+    },
+    "random_bigram_null": {
+      "axis1_pct": 41.7,
+      "min_sim_pct": 98.5,
+      "h2": [
+        2.06,
+        2.12
+      ]
+    },
+    "section_mixture_bigram": {
+      "axis1_pct": 74.1,
+      "min_sim_pct": 67.8,
+      "h2": [
+        1.78,
+        2.17
+      ]
+    },
+    "self_copying_drift": {
+      "axis1_pct": 65.2,
+      "min_sim_pct": 94.8,
+      "h2": [
+        2.44,
+        3.62
+      ]
+    },
+    "verbose_latin_italian": {
+      "axis1_pct": 88.2,
+      "min_sim_pct": 80.4,
+      "h2": [
+        2.9,
+        3.08
+      ]
+    },
+    "verdict": "pipeline does not manufacture gradients (null 42%/98.5%); but a 1-axis gradient is reproduced by both meaningful and meaningless structured processes; only the section-mixture matches the low entropy; the gradient constrains interpretation without deciding it"
+  },
+  "exp14_leave_one_section_out": {
+    "Pharma": {
+      "in_sample": 0.25,
+      "loo": 0.27
+    },
+    "Cosmo": {
+      "in_sample": 0.26,
+      "loo": 0.26
+    },
+    "Stars": {
+      "in_sample": 0.48,
+      "loo": 0.46
+    },
+    "Herbal_pole_halfsplit": {
+      "in_sample": 0.0,
+      "held_out": 0.17
+    },
+    "Bio_pole_halfsplit": {
+      "in_sample": 1.0,
+      "held_out": 0.95
+    },
+    "verdict": "nothing baked in; Pharma stays mid-gradient out-of-sample; Bio pole robust"
+  },
+  "exp15_shuffle_nulls": {
+    "real": {
+      "axis1_pct": 88.1,
+      "min_sim_pct": 48.7
+    },
+    "word_order_shuffle": {
+      "axis1_pct": 88.1,
+      "min_sim_pct": 48.7
+    },
+    "glyph_shuffle": {
+      "axis1_pct": 74.0,
+      "min_sim_pct": 45.2
+    },
+    "verdict": "word order contributes nothing; ~74/88 axis points are glyph-frequency + word-length, ~14 genuine within-word sequence"
+  },
+  "exp16_self_copying_generator": {
+    "mechanism": "whole-word copying from recent text; mutations within attested similarity classes; drift theta; verbatim-copy prob 0.10->0.35",
+    "criteria_preset": {
+      "h2_band": [
+        1.6,
+        2.3
+      ],
+      "axis1_min": 70,
+      "coord_target": 0.6,
+      "repetition_target": 0.68
+    },
+    "unit_h2_range": [
+      1.1,
+      1.95
+    ],
+    "map_axis1_pct": 88.7,
+    "map_min_sim_pct": 18.0,
+    "real_instrument_coord_first_last": [
+      -0.16,
+      0.12
+    ],
+    "late_repetition": 0.9,
+    "verdict": "structured self-copying reproduces low entropy + one-axis gradient (the answer Exp 13 lacked); overshoots repetition and does not traverse the real axis -> phenomenology, not this manuscript"
+  },
+  "exp17_beam_search": {
+    "greedy": [
+      76.6,
+      77.2
+    ],
+    "beam5": [
+      80.7,
+      81.0
+    ],
+    "beam10": [
+      80.6,
+      81.0
+    ],
+    "verdict": "A/B gap stable and far from 100% under beam search -> not a greedy artifact"
+  },
+  "exp18_cross_transcriber": {
+    "H": [
+      76.6,
+      77.2
+    ],
+    "F": [
+      70.1,
+      82.1
+    ],
+    "C": [
+      68.2,
+      68.6
+    ],
+    "verdict": "A/B gap holds on 2 independent transcribers -> not a transcription artifact"
+  },
+  "exp19_label_ngram": {
+    "star_vs_plant_TV": {
+      "suffix2": 0.278,
+      "suffix3": 0.284,
+      "prefix2": 0.254,
+      "prefix3": 0.326
+    },
+    "within_B_suffix2": {
+      "obs": 0.383,
+      "null": 0.173,
+      "p": 0.0005
+    },
+    "within_B_suffix3": {
+      "obs": 0.538,
+      "null": 0.316,
+      "p": 0.0005
+    },
+    "verdict": "richer templates separate star/plant (TV 0.25-0.33 vs 0.154) and within-dialect (p=0.0005), but the pattern is the e-vs-o register axis, not evident naming -> Exp 12 partly revised, interpretation reopened not resolved"
+  },
+  "exp20_calibrated_generator": {
+    "AB_feature_targets": {
+      "q_init": [
+        0.094,
+        0.25
+      ],
+      "end_edy": [
+        0.041,
+        0.263
+      ],
+      "has_ee": [
+        0.064,
+        0.137
+      ],
+      "che_vs_cho": "che up, cho down"
+    },
+    "criteria_preset": {
+      "h2_band": [
+        1.6,
+        2.3
+      ],
+      "axis1_min": 70,
+      "coord_target": 0.8,
+      "repetition_band": [
+        0.5,
+        0.8
+      ],
+      "token_overlap_min": 3
+    },
+    "unit_h2_range": [
+      0.89,
+      1.92
+    ],
+    "map_axis1_pct": 80.7,
+    "coord_max": 0.76,
+    "coord_plateaus": true,
+    "real_bio_coord": 1.03,
+    "late_repetition": 0.99,
+    "top_token_overlap_20": 1,
+    "generated_pole_examples": [
+      "qcheeetedy",
+      "otcheeel",
+      "qchoeetedy",
+      "cheel"
+    ],
+    "verdict": "calibration FAILS informatively: directed local self-copying reaches the pole's statistical neighborhood (coord +0.76, low entropy) but generates malformed pseudo-words, not Bio-B's coherent vocabulary, and stalls short of +1.03; the pole requires coherent word-template (slot-grammar) structure beyond directed local self-copying"
+  },
+  "program_status": "Computational text-only program complete at 20 experiments. Central result: a reproducible structural metric finds a one-dimensional register gradient (real, robust to beam search and transcriber, largely first-order); generators and labels constrain but do not solve interpretation; the Biological pole carries word-template structure that self-copying-with-drift does not manufacture."
+}

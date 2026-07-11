@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: Inventory-transfer analysis reveals a robust one-dimensional structural gradient in Voynichese
+message: If you use this code or these results, please cite this repository (and the archived-release DOI once minted).
+type: software
+authors:
+  # TODO: confirm the exact name/affiliation you want published before pushing.
+  - family-names: Koshy
+    given-names: Nitin Stephen
+version: "v11"
+date-released: "2026-07-09"
+license: MIT
+# TODO: replace REPLACE-ME with the real GitHub owner/repo before publishing.
+repository-code: https://github.com/REPLACE-ME/voynich-transfer
+abstract: >-
+  Reproducible code and result artifacts for inventory-transfer experiments on
+  Voynichese: unsupervised glyph-merge discovery, Currier A/B transfer, a
+  one-dimensional section/folio register gradient, scribe decomposition, label
+  morphology, robustness controls, and self-copying generators. Twenty
+  pre-specified experiments; constrains but does not decipher the manuscript.
+references:
+  - type: data
+    title: "Voynich-public corpus (Lindemann & Bowern), incl. Takahashi et al. transliterations"
+    repository-code: https://github.com/chirila/Voynich-public
+  - type: data
+    title: "v101 transliteration digital edition"
+    repository-code: https://github.com/musyoku/voynich-transcription

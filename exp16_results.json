@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "h2_band": [
+      1.6,
+      2.3
+    ],
+    "axis1_min": 70,
+    "coord_target": 0.6
+  },
+  "unit_h2_range": [
+    1.102,
+    1.946
+  ],
+  "coord_first_last": [
+    -0.16,
+    0.12
+  ],
+  "coords": [
+    -0.16,
+    -0.07,
+    -0.15,
+    -0.07,
+    -0.06,
+    -0.1,
+    -0.14,
+    -0.1,
+    -0.01,
+    0.11,
+    0.06,
+    0.12
+  ],
+  "late_repetition": 0.904,
+  "real_bio_repetition_2000w": 0.681,
+  "map": {
+    "axis1_pct": 88.7,
+    "min_sim_pct": 18.0,
+    "mean_sim_pct": 69.8
+  }
+}

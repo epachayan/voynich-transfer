@@ -1,0 +1,42 @@
+{
+  "real": {
+    "axis1_pct": 88.1,
+    "min_sim_pct": 48.7,
+    "mean_sim_pct": 78.5,
+    "h2_lo": 1.739,
+    "h2_hi": 2.125,
+    "n_units": 10
+  },
+  "random_bigram": {
+    "axis1_pct": 41.7,
+    "min_sim_pct": 98.5,
+    "mean_sim_pct": 99.3,
+    "h2_lo": 2.057,
+    "h2_hi": 2.118,
+    "n_units": 12
+  },
+  "section_mixture": {
+    "axis1_pct": 74.1,
+    "min_sim_pct": 67.8,
+    "mean_sim_pct": 85.6,
+    "h2_lo": 1.78,
+    "h2_hi": 2.166,
+    "n_units": 10
+  },
+  "self_copying_drift": {
+    "axis1_pct": 65.2,
+    "min_sim_pct": 94.8,
+    "mean_sim_pct": 98.0,
+    "h2_lo": 2.436,
+    "h2_hi": 3.618,
+    "n_units": 12
+  },
+  "verbose_latin_italian": {
+    "axis1_pct": 88.2,
+    "min_sim_pct": 80.4,
+    "mean_sim_pct": 91.3,
+    "h2_lo": 2.901,
+    "h2_hi": 3.081,
+    "n_units": 12
+  }
+}
