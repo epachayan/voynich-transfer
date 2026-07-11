@@ -60,7 +60,7 @@ Run roughly in this order; a few scripts consume another script's JSON output (n
 
 See [docs/VALIDATION_ADDENDUM.md](docs/VALIDATION_ADDENDUM.md) for Experiments 21/21b's design and results.
 
-**stdout only** means the script prints its findings but writes no JSON — there is no committed reference file to diff a rerun against for Experiments 4, 5, 8, 9, 10, or the window-replication check; verify those by comparing printed output to the corresponding numbers in `docs/RESEARCH_NOTE.md` (and, for a same-page summary, `results/results_consolidated.json` — see below).
+**stdout only** means the script prints its findings but writes no JSON — there is no committed reference file to diff a rerun against for Experiments 4, 5, 8, 9, 10, or the window-replication check; verify those by comparing printed output to the corresponding numbers in `docs/RESEARCH_NOTE.md` (and, for a same-page summary, `results/results_consolidated.json` — see "Repository layout" above).
 
 Each script prints its findings to stdout and writes/updates the matching file in `results/`. See [docs/DATA.md](docs/DATA.md) for corpus setup, calibration numbers, and how to restore the committed reference JSON after a local rerun.
 
