@@ -54,7 +54,11 @@ spans a wide range depending on period/orthographic convention.
 
 Geometry: the known corpus gives MDS axis-1 = **47.0%** with
 max-gap/range = 0.362 (clusters); the Voynich real units give **88.1%** with
-max-gap/range = 0.182 (one filled axis).
+max-gap/range = 0.182 (one filled axis). This 88.1% is the Exp-13-style
+12-unit construction used here for an apples-to-apples comparison, not
+Experiment 6's headline 84.1% (13-unit map) — the two are different
+constructions measuring the same phenomenon; see RESEARCH_NOTE.md §15 for
+why they shouldn't be compared digit-for-digit.
 
 ## What this establishes
 
