@@ -1,0 +1,137 @@
+{
+ "design": {
+  "units": [
+   "LAT_SS",
+   "LAT_SS",
+   "LAT_AIX",
+   "LAT_AIX",
+   "LAT_PIC",
+   "LAT_PIC",
+   "ITA_RET",
+   "ITA_RET",
+   "ENG_SS",
+   "ENG_SS",
+   "ENG_ALPH",
+   "ENG_ALPH"
+  ],
+  "unit_words": 2000,
+  "k": 17
+ },
+ "tier_means": {
+  "T0_same_work": 0.9399067925185639,
+  "T1_same_lang": 0.5776387234789637,
+  "T2_diff_lang": 0.33305951913480353
+ },
+ "tier_detail": {
+  "T0_same_work": [
+   0.915,
+   0.954,
+   0.937,
+   0.925,
+   0.939,
+   0.969
+  ],
+  "T1_same_lang": [
+   0.89,
+   0.832,
+   0.412,
+   0.446,
+   0.855,
+   0.793,
+   0.379,
+   0.465,
+   0.457,
+   0.502,
+   0.405,
+   0.45,
+   0.588,
+   0.592,
+   0.593,
+   0.585
+  ],
+  "T2_diff_lang": [
+   0.336,
+   0.445,
+   0.274,
+   0.277,
+   0.466,
+   0.368,
+   0.36,
+   0.448,
+   0.271,
+   0.286,
+   0.455,
+   0.375,
+   0.334,
+   0.402,
+   0.267,
+   0.265,
+   0.484,
+   0.394,
+   0.332,
+   0.362,
+   0.287,
+   0.296,
+   0.466,
+   0.383,
+   0.352,
+   0.387,
+   0.226,
+   0.174,
+   0.222,
+   0.248,
+   0.384,
+   0.414,
+   0.193,
+   0.155,
+   0.203,
+   0.251,
+   0.292,
+   0.267,
+   0.357,
+   0.296,
+   0.383,
+   0.335,
+   0.466,
+   0.414
+  ]
+ },
+ "topic_control_LATSS_ENGSS": 0.277,
+ "language_pairs": {
+  "LAT (cross-work)": 0.574,
+  "ITA<->LAT": 0.38,
+  "ENG<->LAT": 0.304,
+  "ENG<->ITA": 0.351,
+  "ENG (cross-work)": 0.589
+ },
+ "geometry": {
+  "known_axis1_pct": 47.0,
+  "known_maxgap_over_range": 0.362,
+  "voynich_axis1_pct": 88.1,
+  "voynich_maxgap_over_range": 0.182,
+  "known_axis1_coords": {
+   "LAT_SS_0": -0.199,
+   "LAT_SS_1": -0.193,
+   "LAT_AIX_0": -0.217,
+   "LAT_AIX_1": -0.182,
+   "LAT_PIC_0": -0.306,
+   "LAT_PIC_1": -0.353,
+   "ITA_RET_0": -0.037,
+   "ITA_RET_1": 0.006,
+   "ENG_SS_0": 0.423,
+   "ENG_SS_1": 0.445,
+   "ENG_ALPH_0": 0.295,
+   "ENG_ALPH_1": 0.318
+  }
+ },
+ "verdicts": {
+  "P1_same_work_ge_090": true,
+  "P2_ladder_monotone": true,
+  "P3_difflang_below_voynich_AB": true,
+  "P4_known_gappier_than_voynich": true
+ },
+ "reference": {
+  "voynich_AB_recovery_k17": 0.77,
+  "source": "Exp 2"
+ }
+}

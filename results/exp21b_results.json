@@ -1,0 +1,54 @@
+{
+ "draw0_tiers": {
+  "T0": 0.94,
+  "T1": 0.578,
+  "T2": 0.333
+ },
+ "draw1_tiers": {
+  "T0": 0.898,
+  "T1": 0.543,
+  "T2": 0.338
+ },
+ "work_matrix_draw0": {
+  "LAT_SS|LAT_SS": 0.915,
+  "LAT_SS|LAT_AIX": 0.842,
+  "LAT_SS|LAT_PIC": 0.425,
+  "LAT_SS|ITA_RET": 0.397,
+  "LAT_SS|ENG_SS": 0.277,
+  "LAT_SS|ENG_ALPH": 0.416,
+  "LAT_AIX|LAT_SS": 0.842,
+  "LAT_AIX|LAT_AIX": 0.954,
+  "LAT_AIX|LAT_PIC": 0.453,
+  "LAT_AIX|ITA_RET": 0.358,
+  "LAT_AIX|ENG_SS": 0.279,
+  "LAT_AIX|ENG_ALPH": 0.432,
+  "LAT_PIC|LAT_SS": 0.425,
+  "LAT_PIC|LAT_AIX": 0.453,
+  "LAT_PIC|LAT_PIC": 0.937,
+  "LAT_PIC|ITA_RET": 0.384,
+  "LAT_PIC|ENG_SS": 0.187,
+  "LAT_PIC|ENG_ALPH": 0.231,
+  "ITA_RET|LAT_SS": 0.397,
+  "ITA_RET|LAT_AIX": 0.358,
+  "ITA_RET|LAT_PIC": 0.384,
+  "ITA_RET|ITA_RET": 0.925,
+  "ITA_RET|ENG_SS": 0.319,
+  "ITA_RET|ENG_ALPH": 0.383,
+  "ENG_SS|LAT_SS": 0.277,
+  "ENG_SS|LAT_AIX": 0.279,
+  "ENG_SS|LAT_PIC": 0.187,
+  "ENG_SS|ITA_RET": 0.319,
+  "ENG_SS|ENG_SS": 0.939,
+  "ENG_SS|ENG_ALPH": 0.589,
+  "ENG_ALPH|LAT_SS": 0.416,
+  "ENG_ALPH|LAT_AIX": 0.432,
+  "ENG_ALPH|LAT_PIC": 0.231,
+  "ENG_ALPH|ITA_RET": 0.383,
+  "ENG_ALPH|ENG_SS": 0.589,
+  "ENG_ALPH|ENG_ALPH": 0.969
+ },
+ "verdicts": {
+  "P5_redraw_ladder": true,
+  "P6_redraw_T2_below_077": true
+ }
+}

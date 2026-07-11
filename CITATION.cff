@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Koshy
     given-names: Nitin Stephen
-version: "v11"
-date-released: "2026-07-09"
+version: "v12"
+date-released: "2026-07-11"
 license: MIT
 repository-code: https://github.com/epachayan/voynich-transfer
 abstract: >-
@@ -14,7 +14,8 @@ abstract: >-
   Voynichese: unsupervised glyph-merge discovery, Currier A/B transfer, a
   one-dimensional section/folio register gradient, scribe decomposition, label
   morphology, robustness controls, and self-copying generators. Twenty
-  pre-specified experiments; constrains but does not decipher the manuscript.
+  pre-specified experiments plus a known-structure validation addendum
+  (Experiments 21/21b); constrains but does not decipher the manuscript.
 references:
   - type: data
     title: "Voynich-public corpus (Lindemann & Bowern), incl. Takahashi et al. transliterations"
