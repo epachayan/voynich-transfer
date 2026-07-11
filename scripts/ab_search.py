@@ -121,5 +121,5 @@ for seed in (2026, 408):
     s = {t["token"] for t in tj[1:]}
     print(f"seed {seed}: shared with main B run: {len(s & setB17)}/17 | new: {sorted(s - setB17)}")
 
-json.dump(dict(trajA=trajA, trajB=trajB), open("ab_results.json", "w"), indent=1)
-print("\nsaved ab_results.json")
+json.dump(dict(trajA=trajA, trajB=trajB), open("results/ab_results.json", "w"), indent=1)
+print("\nsaved results/ab_results.json")

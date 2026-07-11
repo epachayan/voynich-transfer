@@ -184,5 +184,5 @@ _out = {
       "generated_coord": round(coord(genBB_stream), 4)},
   "verdict": "one first-order parameter reproduces the (coordinate, h2) interior to +/-0.08 bits; the Biological pole's extremity is a word-repetition/memory effect a bigram model cannot reach"
 }
-_json.dump(_out, open("gen_results.json", "w"), indent=2)
-print("\nwrote gen_results.json")
+_json.dump(_out, open("results/gen_results.json", "w"), indent=2)
+print("\nwrote results/gen_results.json")

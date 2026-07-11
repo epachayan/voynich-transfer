@@ -88,7 +88,7 @@ print("\naxis loadings  (HA pole <- ... -> BB pole):")
 print("  HA side:", " ".join(f"{t}({100*v:.1f})" for t, v in loading[:7]))
 print("  BB side:", " ".join(f"{t}(+{100*v:.1f})" for t, v in loading[-7:][::-1]))
 
-mp = json.load(open("map_results.json"))
+mp = json.load(open("results/map_results.json"))
 plan = [("H", "A", "HA", 3), ("P", "A", "PA", 1), ("H", "B", "HB", 1),
         ("S", "B", "SB", 5), ("B", "B", "BB", 3)]
 unit_scores = {}
@@ -139,5 +139,5 @@ for key, lst in groups.items():
 print(f"\nnoise check: mean adjacent-folio |delta| within section = {np.mean(adj):.3f} vs overall folio sd = {sd:.3f}")
 
 json.dump({"folio_scores": fol_score, "meta": {f: folio_meta[f] for f in fol_score},
-           "validation_r": r}, open("folio_gradient.json", "w"), indent=1)
-print("saved folio_gradient.json")
+           "validation_r": r}, open("results/folio_gradient.json", "w"), indent=1)
+print("saved results/folio_gradient.json")

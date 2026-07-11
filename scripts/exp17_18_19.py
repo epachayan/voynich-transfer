@@ -137,8 +137,8 @@ _out={
  "exp19_label_ngram":{"star_vs_plant_TV":{"suffix2":0.278,"suffix3":0.284,"prefix2":0.254,"prefix3":0.326},
                "within_B_suffix2":{"obs":ob,"null":nu,"p":pv},
                "note":"richer templates separate star/plant (TV 0.25-0.33 vs initial-glyph 0.154) and within-dialect (p=0.0005), but pattern is the e-vs-o register axis, not evident naming"}}
-json.dump(_out,open("exp17_18_19_results.json","w"),indent=2,default=float)
-print("\nwrote exp17_18_19_results.json with numbers")
+json.dump(_out,open("results/exp17_18_19_results.json","w"),indent=2,default=float)
+print("\nwrote results/exp17_18_19_results.json with numbers")
 
 # --- corrected label n-gram JSON: both suffix-2 and suffix-3, correctly labeled (review fix #4) ---
 import json as _j
@@ -146,8 +146,8 @@ _w={}
 for _k in (2,3):
     _ob,_nu,_pv=perm_B(["B","C","S"],"suf",_k)
     _w[f"within_B_suffix{_k}"]={"obs":round(_ob,3),"null":round(_nu,3),"p":round(_pv,4)}
-_d=_j.load(open("exp17_18_19_results.json"))
+_d=_j.load(open("results/exp17_18_19_results.json"))
 _d["exp19_label_ngram"].pop("within_B_suffix2",None)
 _d["exp19_label_ngram"].update(_w)
-_j.dump(_d,open("exp17_18_19_results.json","w"),indent=2,default=float)
+_j.dump(_d,open("results/exp17_18_19_results.json","w"),indent=2,default=float)
 print("fixed exp19 suffix-2/3 labeling in JSON")

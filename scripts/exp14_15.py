@@ -125,8 +125,8 @@ json.dump({"exp14_leave_one_out":{s:{"in_sample":round(insample[s],3)} for s in 
            "exp15_shuffle":{"real":[round(base_ax,1),round(base_mn,1)],
                             "word_order_shuffle":[round(wo_ax,1),round(wo_mn,1)],
                             "glyph_shuffle":[round(gs_ax,1),round(gs_mn,1)]}},
-          open("exp14_15_results.json","w"),indent=2)
-print("\nwrote exp14_15_results.json")
+          open("results/exp14_15_results.json","w"),indent=2)
+print("\nwrote results/exp14_15_results.json")
 
 # --- corrected JSON: include leave-one-out values (review fix #3) ---
 import json as _j
@@ -145,5 +145,5 @@ _out={"exp14_leave_one_section_out":{_s:{"in_sample":round(insample[_s],3),
       "exp15_shuffle":{"real":[round(base_ax,1),round(base_mn,1)],
                        "word_order_shuffle":[round(wo_ax,1),round(wo_mn,1)],
                        "glyph_shuffle":[round(gs_ax,1),round(gs_mn,1)]}}
-_j.dump(_out,open("exp14_15_results.json","w"),indent=2)
-print("rewrote exp14_15_results.json with leave-one-out values")
+_j.dump(_out,open("results/exp14_15_results.json","w"),indent=2)
+print("rewrote results/exp14_15_results.json with leave-one-out values")

@@ -133,5 +133,5 @@ print("\nCRITERIA:",crit)
 json.dump({"targets":{k:round(v,3) for k,v in tgt.items()},"unit_h2":[round(x,3) for x in h2s],
            "coords":[round(c,2) for c in cs],"coord_max":round(max(cs),2),
            "map_axis1":round(ax,1),"map_min_sim":round(mn,1),"token_overlap_20":ov,
-           "criteria":crit},open("exp20_results.json","w"),indent=2,default=str)
-print("wrote exp20_results.json")
+           "criteria":crit},open("results/exp20_results.json","w"),indent=2,default=str)
+print("wrote results/exp20_results.json")

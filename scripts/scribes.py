@@ -129,5 +129,5 @@ for h in (1, 2, 3, 4, 5):
 
 json.dump({"base": base, "own": own, "toks": TOKS,
            "rec": {f"{r}|{c}": v for (r, c), v in rec.items()}},
-          open("scribes_results.json", "w"), indent=1)
-print("\nsaved scribes_results.json")
+          open("results/scribes_results.json", "w"), indent=1)
+print("\nsaved results/scribes_results.json")

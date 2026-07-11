@@ -3,7 +3,7 @@ import numpy as np
 from collections import OrderedDict
 
 allowed = set("abcdefghiklmnopqrstxyz")
-G = json.load(open("folio_gradient.json"))
+G = json.load(open("results/folio_gradient.json"))
 score, meta = G["folio_scores"], G["meta"]
 
 folio_words = OrderedDict()

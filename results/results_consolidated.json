@@ -1,5 +1,5 @@
 {
-  "note": "Consolidated key results for all 20 experiments. Companion to voynich_gradient_note_v11.md. Regenerate raw numbers via the scripts; this file is for one-step diffing of a replication.",
+  "note": "Consolidated key results for all 20 experiments. Companion to docs/RESEARCH_NOTE.md. Regenerate raw numbers via the scripts; this file is for one-step diffing of a replication.",
   "method": {
     "metric": "h2 = H(adjacent bigram) - H(unigram), bits; space is a symbol",
     "search": "greedy: top-90 within-word adjacent pairs per step, apply argmax-h2 merge",

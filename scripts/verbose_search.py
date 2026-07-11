@@ -151,5 +151,5 @@ for name, r in ref_stats.items():
     else:
         print(f"{name[:28]:28s} target h2={r['h2']:.3f} NOT reached (max {trajA[-1]['h2']:.3f})")
 
-json.dump(dict(voy_base=voy_base, refs=ref_stats, trajA=trajA, trajB=trajB), open("results.json", "w"), indent=1)
-print("\nsaved results.json")
+json.dump(dict(voy_base=voy_base, refs=ref_stats, trajA=trajA, trajB=trajB), open("results/results.json", "w"), indent=1)
+print("\nsaved results/results.json")

@@ -9,7 +9,7 @@ with open("Voynich-public/Corpora/Voynich_texts/interlinear_full_words.txt") as 
             continue
         fdh[row["folio"]][row["d.hand"]] += 1
 
-G = json.load(open("folio_gradient.json"))
+G = json.load(open("results/folio_gradient.json"))
 score = G["folio_scores"]
 meta = G["meta"]
 SEC = {"H": "Herbal", "P": "Pharma", "S": "Stars", "B": "Bio",

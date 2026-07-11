@@ -170,5 +170,5 @@ _res["marquee_star_vs_plant"] = {
     "star_coord": round(coord(_star), 3), "plant_coord": round(coord(_plant), 3),
     "initial_glyph_TV": round(float(TV(dist(_star, INIT, init_class), dist(_plant, INIT, init_class))), 3),
     "verdict": "under these morphology tests, star-labels and plant-labels do not separate like referent names"}
-_json.dump(_res, open("label_results.json", "w"), indent=2)
-print("\nwrote label_results.json")
+_json.dump(_res, open("results/label_results.json", "w"), indent=2)
+print("\nwrote results/label_results.json")

@@ -18,8 +18,9 @@ Thumbs.db
 *.swp
 *~
 
-# NOTE: the committed *_results.json files are REFERENCE outputs for
+# NOTE: the committed results/*.json files are REFERENCE outputs for
 # byte-level comparison and are intentionally tracked. Re-running a script
-# overwrites its JSON locally; restore the reference copy with
-#   git checkout -- <name>_results.json
+# from the repo root overwrites its JSON in results/ locally; restore the
+# reference copy with
+#   git checkout -- results/<name>_results.json
 # or inspect the diff to confirm your run reproduces the reported numbers.

@@ -123,5 +123,5 @@ print(f"endpoint similarity ({ou[0]} vs {ou[-1]}): {100*far:.1f}")
 
 json.dump({"units": units, "R": R.tolist(), "fiedler": fiedler.tolist(),
            "order": [units[i] for i in order], "base": base},
-          open("map_results.json", "w"), indent=1)
-print("saved map_results.json")
+          open("results/map_results.json", "w"), indent=1)
+print("saved results/map_results.json")

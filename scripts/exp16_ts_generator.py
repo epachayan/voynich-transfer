@@ -137,5 +137,5 @@ res={"criteria":{"h2_band":[1.6,2.3],"axis1_min":70,"coord_target":0.6},
      "late_repetition":round(1-len(set(U[-1]))/len(U[-1]),3),
      "real_bio_repetition_2000w":round(1-len(set(realBio))/len(realBio),3),
      "map":{"axis1_pct":round(ax,1),"min_sim_pct":round(mn,1),"mean_sim_pct":round(me,1)}}
-json.dump(res,open("exp16_results.json","w"),indent=2)
-print("wrote exp16_results.json")
+json.dump(res,open("results/exp16_results.json","w"),indent=2)
+print("wrote results/exp16_results.json")

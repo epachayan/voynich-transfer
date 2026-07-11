@@ -177,5 +177,5 @@ for name, U in [("real", real_units), ("random_bigram", rand_units), ("section_m
     a, mn, me, lo, hi = mapstats(U)
     res[name] = {"axis1_pct": round(a,1), "min_sim_pct": round(mn,1), "mean_sim_pct": round(me,1),
                  "h2_lo": round(lo,3), "h2_hi": round(hi,3), "n_units": len(U)}
-json.dump(res, open("exp13_results.json","w"), indent=2)
-print("\nwrote exp13_results.json")
+json.dump(res, open("results/exp13_results.json","w"), indent=2)
+print("\nwrote results/exp13_results.json")
